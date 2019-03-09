@@ -4,26 +4,26 @@ import PropTypes from 'prop-types';
 
 export class Todos extends Component {
 
-  toggleComplete = (e) => {
-    console.log('hey');
-    
-  }
   
   render() {
-    const { todos } = this.props;
+    const { todos, toggleComplete, delTodo } = this.props;
     
     return todos.map(todo => (
       <TodoItem 
       key={todo.id} 
       todo={todo} 
-      toggleComplete={this.toggleComplete}  />
+      toggleComplete={toggleComplete}
+      delTodo={delTodo}  />
     ))
   }
 }
 
 // PropTypes
 Todos.propTypes = {
-  todos: PropTypes.array.isRequired
+  todos: PropTypes.array.isRequired,
+  toggleComplete: PropTypes.func.isRequired,
+  delTodo: PropTypes.func.isRequired
+
 }
 
 export default Todos;
