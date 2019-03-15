@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #333;
+  color: #fff;
+  line-height: 1.6;
+  /* height: 100vh;
+  overflow: hidden; */
+}
+
+.app-container {
+  /* border: 1px solid  black; */
+  /* text-align: center; */
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.left-pane {
+  /* flex-grow: 1; */
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  /* border: 1px solid black; */
+
+}
+
+.right-pane {
+  display: flex;
+  flex-direction: row;
+  width: 66%;
+  /* flex-grow: 3; */
+  /* border: 1px solid black; */
+  justify-content: space-between;
+  
+}
+
+.input-el {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  height: 100px;
+  padding: 10px;
+}
+
+.input-el input {
+  /* height: 50px; */
+  margin-bottom: 0;
+}
+
+.form-submit-button {
+  background: #0066A2;
+  color: white;
+  /* border-style: outset; */
+  border-color: #0066A2;
+  height: 30px;
+  width: 100px;
+  font: bold 15px arial, sans-serif;
+  text-shadow: none;
+  margin-left: 10px;
+}
+
+.card-holder{
+  /* border: 1px solid red; */
+  width: 30vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.card {
+  background: orchid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
+  width: 181px;
+  margin: 10px 15px;
+  border: 1px solid darkblue;
+}
+
+.card span {
+  font-size: 20px;
+  text-align: center;
+  overflow-y: scroll;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.buttons input {
+  padding: 10px;
+}
+
