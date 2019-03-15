@@ -76,7 +76,7 @@ class App extends Component {
                   toggleComplete={this.toggleComplete}
                   delTodo={this.delTodo} />
               </React.Fragment>
-            )} />
+            )} />         
             <Route path="/about" component={About}
             
             />
