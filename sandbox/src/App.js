@@ -14,17 +14,17 @@ class App extends Component {
   }
 
   createCard = (content) => {
-    this.setState( {
-      cards: [...this.state.cards, {
+    this.setState(state => ({
+      cards: [...state.cards, {
         col: 1,
         content,
         id: uuid.v4()
       }]
-    })
+    }));
   }
-
+  // add state as callback
   editCardColumn = (id, col) => {
-    this.setState( {
+    this.setState({
       cards: this.state.cards.map(card => {
         if (card.id === id) {
           card.col = col;
@@ -35,19 +35,22 @@ class App extends Component {
   }
 
   render() {
-    const { cards } = this.state; 
-    
+    const { cards } = this.state;
+
     return (
       <div className="app-container">
         <div className="left-pane">
-          <InputElement createCard={this.createCard}/>
-          <CardHolder col= {1} cards={cards} editCardColumn={this.editCardColumn}/>
+          <InputElement createCard={this.createCard} />
+          <CardHolder col={1} cards={cards} editCardColumn={this.editCardColumn} />
 
         </div>
-        <div className="right-pane">
-          <CardHolder col={2} cards={cards} editCardColumn={this.editCardColumn}/>
-          <CardHolder col={3} cards={cards} editCardColumn={this.editCardColumn}/>
 
+        <div className="left-pane">
+          <CardHolder col={2} cards={cards} editCardColumn={this.editCardColumn} />
+        </div>
+
+        <div className="left-pane">
+          <CardHolder col={3} cards={cards} editCardColumn={this.editCardColumn} />
         </div>
       </div>
     );

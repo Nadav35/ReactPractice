@@ -17,14 +17,14 @@ export class Card extends Component {
       <div className="card">
         <span>{content}</span>
         <div className="buttons">
-          <input 
-            disabled={col === 1 ? 'disabled' : ''} 
-            type="submit" value="<"
+          <input
+            disabled={col === 1 ? 'disabled' : ''}
+            type="button" value="<"
             onClick={this.goLeft}
           />
-          <input 
-            disabled={col === 3 ? 'disabled' : ''} 
-            type="submit" value=">"
+          <input
+            disabled={col === 3 ? 'disabled' : ''}
+            type="button" value=">"
             onClick={this.goRight}
           />
         </div>
